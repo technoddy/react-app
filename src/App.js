@@ -15,24 +15,14 @@ class App extends Component {
         id: uuid.v4(),
         title: "work on kubernetes",
         completed: false
-      },
-      {
-        id: uuid.v4(),
-        title: "work on docker",
-        completed: false
-      },
-      {
-        id: uuid.v4(),
-        title: "todo-work on ingress",
-        completed: true
-      },
+      }
     ]
 
   }
 
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/todos')
-      .then(res => this.setState({ todos: res.data }));
+      .then(console.log("success"));
   }
 
   markComplete = (id) => {
